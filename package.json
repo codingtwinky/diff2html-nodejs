@@ -50,7 +50,7 @@
     "diff2html": "./bin/diff2html"
   },
 
-  "main": "./src/diff2html.js",
+  "main": "./diff2html.js",
 
   "dependencies": {
   },
