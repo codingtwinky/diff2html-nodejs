@@ -53,9 +53,6 @@
   "main": "./src/diff2html.js",
 
   "dependencies": {
-    "commander": "2.7.1",
-    "extend": "2.0.0",
-    "pkginfo": "0.3.0"
   },
 
   "devDependencies": {
@@ -70,7 +67,6 @@
 
   "files": [
     "bin",
-    "src",
-    "dist"
+    "src"
   ]
 }
