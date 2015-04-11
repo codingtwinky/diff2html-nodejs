@@ -26,24 +26,39 @@ This project uses [diff2html](https://github.com/rtfpessoa/diff2html) as base.
 
 * Manually download and import [diff2html.js](https://github.com/rtfpessoa/diff2html) into your page
 
+* Node Package CLI [diff2html-cli](https://github.com/rtfpessoa/diff2html-nodejs-cli)
+
 ## Setup
 
     sudo npm install -g diff2html
 
 ## Usage
 
-    Usage: diff2html [git-diff options]
+Require the library using:
 
-    Options:
+```
+var Diff2Html = require('diff2html').Diff2Html;
+```
 
-        -h, --help           output usage information
-        -V, --version        output the version number
-        -i, --input [file]   Diff input file.
-        -o, --output [file]  Output to file path. Defaults to stdout.
-        -p, --preview        Open preview in the browser.
-        -l, --line           Line by Line diff.
-        -s, --side           Side by Side diff.
-        -j, --json           Export diff in json format.
+> Pretty Line-by-Line Html From Git Word Diff Output
+
+    Diff2Html.getPrettyHtmlFromDiff(exInput)
+
+> Pretty Side-by-Side Html From Git Word Diff Output
+
+    Diff2Html.getPrettySideBySideHtmlFromDiff(exInput)
+
+> Intermediate Json From Git Word Diff Output
+
+    Diff2Html.getJsonFromDiff(exInput)
+
+> Pretty Line-by-Line Html From Json
+
+    Diff2Html.getPrettyHtmlFromJson(exInput)
+
+> Pretty Side-by-Side Html From Json
+
+    Diff2Html.getPrettySideBySideHtmlFromJson(exInput)
 
 ## Contribution
 
