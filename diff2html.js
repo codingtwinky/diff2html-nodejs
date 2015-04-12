@@ -9,8 +9,8 @@
 
 (function (global, undefined) {
 
-  var diffParser = new DiffParser();
-  var htmlPrinter = new HtmlPrinter();
+  var diffParser = require("./src/diff-parser.js").DiffParser;
+  var htmlPrinter = require("./src/html-printer.js").HtmlPrinter;
 
   function Diff2Html() {
   }
@@ -53,7 +53,7 @@
   };
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new Diff2Html();
+    module.exports.Diff2Html = new Diff2Html();
   } else if (typeof global.Diff2Html === 'undefined') {
     global.Diff2Html = new Diff2Html();
   }

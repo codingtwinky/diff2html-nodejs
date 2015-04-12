@@ -7,7 +7,7 @@
 
 (function (global, undefined) {
 
-  var utils = new Utils();
+  var utils = require("./utils.js").Utils;
 
   var LINE_TYPE = {
     INSERTS: "d2h-ins",
@@ -149,7 +149,7 @@
   };
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new DiffParser();
+    module.exports.DiffParser = new DiffParser();
   } else if (typeof global.DiffParser === 'undefined') {
     global.DiffParser = new DiffParser();
   }

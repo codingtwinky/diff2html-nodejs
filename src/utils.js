@@ -27,7 +27,7 @@
   };
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new Utils();
+    module.exports.Utils = new Utils();
   } else if (typeof global.Utils === 'undefined') {
     global.Utils = new Utils();
   }

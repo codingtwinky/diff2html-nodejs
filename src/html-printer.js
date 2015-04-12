@@ -7,8 +7,8 @@
 
 (function (global, undefined) {
 
-  var lineByLinePrinter = new LineByLinePrinter();
-  var sideBySidePrinter = new SideBySidePrinter();
+  var lineByLinePrinter = require("./line-by-line-printer.js").LineByLinePrinter;
+  var sideBySidePrinter = require("./side-by-side-printer.js").SideBySidePrinter;
 
   function HtmlPrinter() {
   }
@@ -18,7 +18,7 @@
   HtmlPrinter.prototype.generateSideBySideJsonHtml = sideBySidePrinter.generateSideBySideJsonHtml;
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new HtmlPrinter();
+    module.exports.HtmlPrinter = new HtmlPrinter();
   } else if (typeof global.HtmlPrinter === 'undefined') {
     global.HtmlPrinter = new HtmlPrinter();
   }

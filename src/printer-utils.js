@@ -7,7 +7,7 @@
 
 (function (global, undefined) {
 
-  var jsDiff = JsDiff;
+  var jsDiff = require("../lib/diff.js");
 
   function PrinterUtils() {
   }
@@ -63,7 +63,7 @@
   }
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new PrinterUtils();
+    module.exports.PrinterUtils = new PrinterUtils();
   } else if (typeof global.PrinterUtils === 'undefined') {
     global.PrinterUtils = new PrinterUtils();
   }

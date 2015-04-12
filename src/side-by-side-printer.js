@@ -7,9 +7,9 @@
 
 (function (global, undefined) {
 
-  var diffParser = new DiffParser();
-  var printerUtils = new PrinterUtils();
-  var utils = new Utils();
+  var diffParser = require("./diff-parser.js").DiffParser;
+  var printerUtils = require("./printer-utils.js").PrinterUtils;
+  var utils = require("./utils.js").Utils;
 
   function SideBySidePrinter() {
   }
@@ -147,7 +147,7 @@
   }
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new SideBySidePrinter();
+    module.exports.SideBySidePrinter = new SideBySidePrinter();
   } else if (typeof global.SideBySidePrinter === 'undefined') {
     global.SideBySidePrinter = new SideBySidePrinter();
   }

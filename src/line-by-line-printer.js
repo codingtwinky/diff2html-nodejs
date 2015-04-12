@@ -7,9 +7,9 @@
 
 (function (global, undefined) {
 
-  var diffParser = new DiffParser();
-  var printerUtils = new PrinterUtils();
-  var utils = new Utils();
+  var diffParser = require("./diff-parser.js").DiffParser;
+  var printerUtils = require("./printer-utils.js").PrinterUtils;
+  var utils = require("./utils.js").Utils;
 
   function LineByLinePrinter() {
   }
@@ -122,7 +122,7 @@
   }
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = new LineByLinePrinter();
+    module.exports.LineByLinePrinter = new LineByLinePrinter();
   } else if (typeof global.LineByLinePrinter === 'undefined') {
     global.LineByLinePrinter = new LineByLinePrinter();
   }
