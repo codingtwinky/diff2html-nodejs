@@ -1,6 +1,6 @@
 {
   "name":     "diff2html",
-  "version":  "0.2.0-6",
+  "version":  "0.2.0-7",
 
   "homepage": "https://www.github.com/rtfpessoa/diff2html-nodejs",
   "description": "Fast Diff to colorized HTML",
