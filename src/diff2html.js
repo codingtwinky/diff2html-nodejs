@@ -9,8 +9,8 @@
 
 (function (global, undefined) {
 
-  var diffParser = require("./src/diff-parser.js").DiffParser;
-  var htmlPrinter = require("./src/html-printer.js").HtmlPrinter;
+  var diffParser = require("./diff-parser.js").DiffParser;
+  var htmlPrinter = require("./html-printer.js").HtmlPrinter;
 
   function Diff2Html() {
   }
