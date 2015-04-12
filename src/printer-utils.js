@@ -7,7 +7,7 @@
 
 (function (global, undefined) {
 
-  var jsDiff = require("../lib/diff.js");
+  var jsDiff = (typeof JsDiff !== "undefined" && JsDiff) || require("../lib/diff.js");
 
   function PrinterUtils() {
   }
